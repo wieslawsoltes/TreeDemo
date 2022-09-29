@@ -20,7 +20,8 @@ public partial class MainWindowViewModel : ViewModelBase
             var root = new NodeViewModel()
             {
                 Name = $"Root{i}",
-                Children = new ObservableCollection<NodeViewModel>()
+                Children = new ObservableCollection<NodeViewModel>(),
+                IsExpanded = false
             };
 
             for (var j = 0; j < 100; j++)
