@@ -11,7 +11,15 @@
   <Design.DataContext>
     <vm:MainWindowViewModel />
   </Design.DataContext>
-  <TreeDataGrid Source="{Binding NodesSource}"
-                ShowColumnHeaders="True">
-  </TreeDataGrid>
+  <DockPanel>
+    <StackPanel DockPanel.Dock="Top">
+      <TextBlock Text="Selected node:" />
+      <TextBox DataContext="{Binding SelectedNode}" 
+               Text="{Binding Name}" />
+      <TextBlock Text="Press F2 to edit cells." />
+    </StackPanel>
+    <TreeDataGrid Source="{Binding NodesSource}"
+                  ShowColumnHeaders="True">
+    </TreeDataGrid>
+  </DockPanel>
 </Window>
